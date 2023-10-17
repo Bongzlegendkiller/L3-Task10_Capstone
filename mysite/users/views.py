@@ -9,6 +9,18 @@ from django.shortcuts import redirect
 from django.contrib.auth.models import User
 
 def user_login(request):
+
+    """
+        This displays users login form or user profile, if user is logged in.
+        Request user_login
+    
+        :param: Request object
+        :type: HttpRequest
+
+        :return: user_login/ user_profile
+        :rtype: HttpResponse
+
+    """
     if request.user.is_authenticated:
         current_user = request.user
         return render(request, 'user_profile.html', {'current_user': current_user})
@@ -17,6 +29,18 @@ def user_login(request):
         return render(request, 'user_login.html')
     
 def validate_user(request):
+
+    """
+        To validate user login or user credentials
+        Request validate_user
+    
+        :param: Request object
+        :type: HttpRequest
+
+        :return: user_login / user_profile
+        :rtype: HttpResponse
+
+    """
     email = request.POST['username']
     password = request.POST['password']    
     # Authorize user
