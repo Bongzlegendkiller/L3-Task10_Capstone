@@ -80,6 +80,18 @@ def user_profile(request):
         return HttpResponseRedirect(reverse('users:user_login'))
 
 def user_create(request):
+
+    """
+        Displays user registration form if user is logged in
+        Request user_create
+    
+        :param: Request object
+        :type: HttpRequest
+
+        :return: user_profile/ user_create
+        :rtype: HttpResponse
+
+    """
     if request.method == 'POST':
         first_name = request.POST.get('firstname')
         last_name = request.POST.get('lastname')
