@@ -57,6 +57,19 @@ def validate_user(request):
         return HttpResponseRedirect(reverse('users:user_profile'))
     
 def user_profile(request):
+
+    
+    """
+        Displays user profile if user is logged in
+        Request user_profile
+    
+        :param: Request.user object
+        :type: HttpRequest
+
+        :return: user_profile
+        :rtype: HttpResponse
+
+    """
     print(request.user.username)
     if request.user.is_authenticated:
         return render(request, 'user_profile.html', {   
