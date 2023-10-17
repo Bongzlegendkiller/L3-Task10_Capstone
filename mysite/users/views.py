@@ -120,6 +120,18 @@ def user_create(request):
          return render(request, 'user_create.html')
 
 def user_logout(request):
+
+    """
+        Logs out user
+        Request user_logout
+    
+        :param: Request object
+        :type: HttpRequest
+
+        :return: user_login
+        :rtype: HttpResponse
+
+    """
     logout(request)
     return HttpResponseRedirect(reverse('users:user_login'))
     
