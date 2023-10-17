@@ -17,7 +17,7 @@ Clone the repository, setup your Python virtual environment then setup Docker to
 ### Step 1: Clone the Repository
 
 ```bash
-git clone Django-Capstone.git
+git clone https://github.com/Bongzlegendkiller/L3-Task10_Capstone.git
 ```
 
 ### Step 2: Create Virtual Environment
